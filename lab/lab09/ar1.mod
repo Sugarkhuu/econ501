@@ -1,22 +1,26 @@
 /*
- * This file implements Growth Model
+ * This file implements AR1 Model
  *
- * Note that this mod-file implements the non-linear first order conditions and that the IRFs show the linear deviations
- * from steady state.
  *
- * It demonstrate the dynamic of the shock of 
+ * It demonstrate the dynamic of the shock of e
+
+ * Simple AR(1) model
+ * This version:
  *
- * This implementation was written by 
+ * This implementation was written by
  *
- * Please note that the following copyright notice only applies to this Dynare 
- * implementation of the model.
  */
- 
+
 %----------------------------------------------------------------
-%  Set up variables 
+%  Set up variables
 %----------------------------------------------------------------
 
- 
+
+
+var x;
+
+
+varexo e;
 
 
 
@@ -26,10 +30,29 @@
 %----------------------------------------------------------------
 
 
+parameters rho,se, b;
+
+
+b = 1;
+
+rho = 0.95;
+
+se = 0.02;
+
+
+
+
 
 %----------------------------------------------------------------
 % Model:First Order Conditions
 %----------------------------------------------------------------
+
+model;
+
+x=  rho*x(-1) + b + e;
+
+end;
+
 
 
 
@@ -38,17 +61,37 @@
 %---------------------------------------------------------------
 
 
+initval;
+
+e = 0;
+
+x = 1;
+
+end;
+
+%----------------------------------------------------------------
+%  Solve the steady state
+%---------------------------------------------------------------
+
+steady;
+
+
+check;
+
+
 
 
 %----------------------------------------------------------------
 %  define shock variances
 %---------------------------------------------------------------
 
+shocks;
 
+var e;
 
-%----------------------------------------------------------------
-%  Solve the steady state
-%---------------------------------------------------------------
+stderr se;
+
+end;
 
 
 
@@ -60,8 +103,8 @@
 
 %----------------------------------------------------------------
 % generate simulation
-% generate IRFs to show 
+% generate IRFs to show
 %
 %----------------------------------------------------------------
 
-
+stoch_simul(linear);
