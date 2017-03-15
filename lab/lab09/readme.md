@@ -16,7 +16,7 @@ you can customize your startup file.
 
 2. download sample mod files. 01, 02, and 03.
 
-  * I just found that mod file cannot start with Numbers such as 01, so I put Numberser such 01 at the end of the files.
+  * I just found that mod file name cannot start with Numbers such as 01, so I put Numbers such 01 at the end of the file names.
 
   * ar1 is the an ar1 model.
   * 02 is a New classical model in 02Sargent_Dynare.pdf.
