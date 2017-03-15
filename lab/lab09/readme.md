@@ -16,6 +16,8 @@ you can customize your startup file.
 
 2. download sample mod files. 01, 02, and 03.
 
+  * I just found that mod file cannot start with numers such as 01, so I put numer such 01 at the end of the files.
+
   * ar1 is the an ar1 model.
   * 02 is a New classical model in 02Sargent_Dynare.pdf.
     - The model includes first order conditions which can be found in 501lab9foc_1.pdf.
