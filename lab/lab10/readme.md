@@ -5,17 +5,17 @@
 Continued RBC model
 
 
-### 1. Sample model from Thomas J. Sargent
 
-stochastic neoclassical growth model with leisure
 
-### 2. RBC model from Jesus Fernandez-Villaverde
+### 1. RBC model from Jesus Fernandez-Villaverde
 
 log utility function for goods and leisure
 
 http://economics.sas.upenn.edu/~jesusfv/teaching.html
 
+### 2. Sample model from Thomas J. Sargent
 
+stochastic neoclassical growth model with leisure
 
 ### 3. RBC baseline model from Johannes Pfeifer
 
