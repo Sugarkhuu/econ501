@@ -111,4 +111,4 @@ end;
 varobs c;
 
 // computes only the posterior mode for demonstration.
-estimation(datafile=c,nobs=400, mode_compute=4, order=1) c;
+estimation(datafile=cdata,nobs=400, mode_compute=4, order=1) c;

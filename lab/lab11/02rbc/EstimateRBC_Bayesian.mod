@@ -91,7 +91,7 @@ end;
 varobs c;
 
 // short MCMC for illustration only 
-estimation(datafile=chpf,mh_replic=1000,order=1,mh_jscale=0.9,mh_nblocks=2 );
-%estimation(datafile=cons,nobs=160, order=1, mh_replic=500, mh_nblocks=1) y c k i n;
+//estimation(datafile=simudata,mh_replic=1000,order=1,mh_jscale=0.9,mh_nblocks=2 );
+estimation(datafile=cdata,nobs=160, order=1, mh_replic=500, mh_nblocks=1) y c k i n;
 
 
